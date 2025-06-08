@@ -63,6 +63,7 @@ const upload = multer({
 
 /* ✅ Middleware to protect routes */
 function requireAuth(req, res, next) {
+  console.log("🧠 Session check:", req.session); // ✅ Add this
   if (!req.session.userId) {
     return res.status(401).json({ message: "Unauthorized. Please login." });
   }
@@ -107,7 +108,7 @@ app.post("/api/auth/logout", (req, res) => {
 });
 
 /* ✅ Resume Upload & Analyze Route */
-app.post("/api/resume/analyze", upload.single("resume"), async (req, res) => {
+app.post("/api/resume/analyze",requireAuth, upload.single("resume"), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ error: "No file uploaded" });
 
