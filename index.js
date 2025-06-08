@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware order: cors -> body parsers -> session
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: "https://smart-resume-ja3k.vercel.app/",
     credentials: true,
   })
 );
