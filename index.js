@@ -22,7 +22,7 @@ app.set("trust proxy", 1);
 
 /* ✅ Fix 2: Enable CORS with credentials */
 app.use(cors({
-  origin: "https://smart-resume-ja3k.vercel.app", // your frontend
+  origin: "https://smart-resume-blush.vercel.app", // your frontend
   credentials: true,
 }));
 
