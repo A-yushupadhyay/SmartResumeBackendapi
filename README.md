@@ -1,5 +1,7 @@
 # 🧠 SmartResume - Backend API
 
+Frontend of SmartResume is Hosted On - [ https://smart-resume-blush.vercel.app ]
+
 This is the backend API for **SmartResume**, a smart resume analyzer powered by Node.js, Express, MongoDB, and PDF parsing. It handles:
 
 - ✅ User authentication (register/login/logout)
